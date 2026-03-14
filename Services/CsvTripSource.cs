@@ -88,11 +88,11 @@ namespace CrewRedDemo.Services
                 }
 
                 //For the `store_and_fwd_flag` column, convert any 'N' values to 'No' and any 'Y' values to 'Yes'.
-                string flag = flagText switch
+                string? flag = flagText switch
                 {
                     "Y" => "Yes",
                     "N" => "No",
-                    string s => s
+                    _ => null
                 };
 
                 SampleCabDatum rec = new SampleCabDatum

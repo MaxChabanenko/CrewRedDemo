@@ -12,7 +12,7 @@ public partial class SampleCabDatum
 
     public double TripDistance { get; set; }
 
-    public string StoreAndFwdFlag { get; set; } = null!;
+    public string? StoreAndFwdFlag { get; set; }
 
     public int PuLocationId { get; set; }
 

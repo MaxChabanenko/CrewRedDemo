@@ -23,7 +23,7 @@ public partial class CabDbContext : DbContext
     {
         modelBuilder.Entity<SampleCabDatum>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__SampleCa__3214EC07ABCBA6C7");
+            entity.HasKey(e => e.Id).HasName("PK__SampleCa__3214EC077D80E496");
 
             entity.HasIndex(e => e.PuLocationId, "IX_SampleCabData_PULocationID");
 
