@@ -25,7 +25,7 @@ CREATE TABLE [dbo].[SampleCabData](
 	[TpepDropoffDatetime] [datetime2](7) NOT NULL,
 	[PassengerCount] [int] NOT NULL,
 	[TripDistance] [float] NOT NULL,
-	[StoreAndFwdFlag] [nchar](3) NOT NULL,
+	[StoreAndFwdFlag] [nchar](3) NULL,
 	[PuLocationId] [int] NOT NULL,
 	[DoLocationId] [int] NOT NULL,
 	[FareAmount] [float] NOT NULL,
@@ -77,3 +77,5 @@ SELECT TOP 100
 FROM [dbo].[SampleCabData]
 ORDER BY TripDurationSeconds DESC;
 ```
+
+Also 'Assume the data comes from a potentially unsafe source' was puzzling but the only column with string (only 3 symbols) where SQL injection was possible I think was StoreAndFwdFlag, but in ReadAsync I transform it to only Yes/No/Null. Other columns are read using TryParse which should prevent converting to text
