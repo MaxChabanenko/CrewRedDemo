@@ -3,7 +3,7 @@ The goal of this task is to implement a simple ETL project in CLI that inserts d
 ## Deliverables
 
 - SQL scripts used for creating the database and tables.
-
+```
 IF NOT EXISTS (SELECT * FROM sys.databases WHERE name = 'crewred_test')
 BEGIN
     CREATE DATABASE [crewred_test];
@@ -44,7 +44,7 @@ ON SampleCabData(TripDistance DESC);
 CREATE NONCLUSTERED INDEX IX_SampleCabData_TravelTime 
 ON SampleCabData(TripDurationSeconds DESC);
 GO
-
+```
 
 - Number of rows in your table after running the program.
 
@@ -53,6 +53,7 @@ GO
 - Any comments on any assumptions made.
 
 I wasn't sure whats required from me in task 4, so I made SQL indexes for the table and here are the queries (tested after running programm):
+```
 SELECT TOP 1 
     PuLocationId, 
     AVG(TipAmount) AS AvgTip
@@ -75,3 +76,4 @@ SELECT TOP 100
     TripDurationSeconds
 FROM [dbo].[SampleCabData]
 ORDER BY TripDurationSeconds DESC;
+```
