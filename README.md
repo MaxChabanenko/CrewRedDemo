@@ -52,7 +52,7 @@ GO
 
 - Any comments on any assumptions made.
 
-I wasn't sure whats required from me in task 4, so I made SQL indexes for the table and here are the queries (tested after running programm):
+I wasn't sure whats required from me in task 4, so I made SQL indexes for the table and here are the queries (tested after running program):
 ```
 SELECT TOP 1 
     PuLocationId, 
